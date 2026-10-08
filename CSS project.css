@@ -1,0 +1,273 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: -3px 3px none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* NAVBAR */
+
+header {
+    background: pink;
+    padding: 15px 8%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #55d6be;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+}
+
+
+/* GENERAL SECTIONS */
+
+section {
+    padding: 70px 10%;
+    text-align: center;
+}
+
+h1,
+h2 {
+    color: #092b45;
+    margin-bottom: 20px;
+}
+
+p {
+    max-width: 800px;
+    margin: auto;
+}
+
+
+/* HOME */
+
+.home {
+    min-height: 90vh;
+    padding-top: 80px;
+}
+
+.image {
+    width: 30%;
+    max-width: 400px;
+    border-radius: 25px;
+    margin: 25px auto;
+    display: block;
+    box-shadow: 0 5px 20px blue;
+}
+
+.hero,
+.frontend,
+.skill,
+.project,
+.students,
+.sign,
+.faq {
+    background: white;
+    margin: 25px auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+
+/* FORM */
+
+form {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #092b45;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+form button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    background: #092b45;
+    color: white;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0d496e;
+}
+
+.error {
+    display: block;
+    color: red;
+    margin-top: 3px;
+}
+
+#successMessage {
+    color: green;
+    margin-top: 15px;
+}
+
+
+/* STUDENT FILTER */
+
+#studentSearch {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+#studentList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.student-card {
+    padding: 25px;
+    background: #eef5f8;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.student-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* FAQ */
+
+.faq {
+    max-width: 900px;
+}
+
+.faq-item {
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    background: #092b45;
+    color: white;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.faq-answer {
+    display: none;
+    padding: 20px;
+    background: #f5f5f5;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question span {
+    transform: rotate(45deg);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 12px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    section {
+        padding: 50px 6%;
+    }
+
+    .image {
+        width: 100%;
+    }
+}
+
+.mamad{
+    display: block;
+    max-width:70px;
+    width: 60px;
+    margin: auto;
+    height: auto;
+    box-shadow: -5px 5px rbg(4,8,9);
+    border-radius: 30%;
+}
